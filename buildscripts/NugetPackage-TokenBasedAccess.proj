@@ -1,0 +1,38 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="default">
+	<PropertyGroup>
+		<BaseDir>$(MSBuildProjectDirectory)\..</BaseDir>
+		<Configuration Condition="'$(Configuration)'==''">Release</Configuration>
+		<TargetFramework Condition="'$(TargetFrameworkVersion)'=='v4.0'">net40</TargetFramework>
+		<TargetFramework Condition="'$(TargetFramework)'!='net40'">net35</TargetFramework>
+		<PackageDir>$(BaseDir)\packages\POSSIBLE.TokenBasedAccess</PackageDir>
+		<SolutionFile>$(MSBuildProjectDirectory)\POSSIBLE.TokenBasedAccess.sln</SolutionFile>
+		<MSBuildExtensions>$(BaseDir)\lib\msbuild\msbuild.community.tasks.dll</MSBuildExtensions>
+	</PropertyGroup>
+ 
+	<UsingTask AssemblyFile="$(MSBuildExtensions)" TaskName="MSBuild.Community.Tasks.XmlUpdate" />
+ 
+	<Target Name="default" DependsOnTargets="NugetPrepareLibraries;NugetPackage" />
+ 
+	<Target Name="NugetPrepareLibraries">
+		<ItemGroup>
+			<MainBinaries Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess\bin\$(Configuration)\POSSIBLE.TokenBasedAccess.dll" />
+		</ItemGroup>
+		<!-- Copy the source files to the package dir -->
+		<Copy SourceFiles="@(MainBinaries)" DestinationFolder="$(PackageDir)\lib\$(TargetFramework)\%(RecursiveDir)" />
+	</Target>
+ 
+	<Target Name="NugetPackage">
+		<!-- Get the version number of the main assembly to insert into the nuspec files -->
+		<GetAssemblyIdentity AssemblyFiles="$(BaseDir)\src\POSSIBLE.TokenBasedAccess\bin\$(Configuration)\POSSIBLE.TokenBasedAccess.dll">
+			<Output TaskParameter="Assemblies" ItemName="AsmInfo" />
+		</GetAssemblyIdentity>
+		<!-- insert the version number into the nuspec files -->
+		<XmlUpdate
+			Namespace="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd"
+			XmlFileName="$(PackageDir)\POSSIBLE.TokenBasedAccess.nuspec"
+			XPath="/package/metadata/version"
+			Value="%(AsmInfo.Version)" /> 
+		<Exec WorkingDirectory="$(PackageDir)" Command="$(BaseDir)\lib\nuget\nuget.exe pack $(PackageDir)\POSSIBLE.TokenBasedAccess.nuspec" />
+	</Target>
+</Project>
+

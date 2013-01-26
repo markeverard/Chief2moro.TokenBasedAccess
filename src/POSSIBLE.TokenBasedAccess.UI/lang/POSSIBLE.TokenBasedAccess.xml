@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <tokenbasedaccess>
+      <title>Page Access Tokens</title>
+      <description>A page access token allows limited access to an unpublished / otherwise secured page via a unique url. Tokens are delivered via email to the selected recipient.</description>
+      <createtoken>Create new token</createtoken>
+      <expiry>Expiry</expiry>
+      <expired>expired</expired>
+      <expireson>expires on</expireson>
+      <expiresin>expires in</expiresin>
+      <usagelimit>Maximum uses</usagelimit>
+      <datelimit>Days until expiry</datelimit>
+      <uses>uses</uses>
+      <in>in</in>
+      <use>use</use>
+      <sentto>Sent to</sentto>
+      <created>Created on</created>
+      <expirytype>Expiry type:</expirytype>
+      <addsendto>Send token to:</addsendto>
+      <resend>Resend</resend>
+      <emailvalidationerror>Please enter a valid email address</emailvalidationerror>
+      <limitvalidationerror>The expiry limit field should be a number</limitvalidationerror>
+      <emailbodyformat>You have been given temporary access to the following page '{0}' on the {1} CMS, which can be accessed using the following link.</emailbodyformat>
+      <emailbodyaccess>Your access </emailbodyaccess>
+      <emailbodyto>to</emailbodyto>
+    </tokenbasedaccess>
+  </language>
+</languages>

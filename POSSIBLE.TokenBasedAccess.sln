@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSSIBLE.TokenBasedAccess", "src\POSSIBLE.TokenBasedAccess\POSSIBLE.TokenBasedAccess.csproj", "{4E527E0B-2F8A-4AD1-A3D2-DB539B664571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSSIBLE.TokenBasedAccess.UI", "src\POSSIBLE.TokenBasedAccess.UI\POSSIBLE.TokenBasedAccess.UI.csproj", "{32018827-AC40-483C-819C-A10D8DCAC015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E527E0B-2F8A-4AD1-A3D2-DB539B664571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E527E0B-2F8A-4AD1-A3D2-DB539B664571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E527E0B-2F8A-4AD1-A3D2-DB539B664571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E527E0B-2F8A-4AD1-A3D2-DB539B664571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32018827-AC40-483C-819C-A10D8DCAC015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32018827-AC40-483C-819C-A10D8DCAC015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32018827-AC40-483C-819C-A10D8DCAC015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32018827-AC40-483C-819C-A10D8DCAC015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

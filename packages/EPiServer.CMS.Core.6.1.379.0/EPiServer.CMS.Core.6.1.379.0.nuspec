@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>EPiServer.CMS.Core</id>
+    <version>6.1.379.0</version>
+    <authors>EPiServer AB</authors>
+    <owners>EPiServer AB</owners>
+    <licenseUrl>http://world.episerver.com/PageFiles/99654/EPiServer EULA.txt</licenseUrl>
+    <projectUrl>http://www.episerver.com/en/Products/Content/</projectUrl>
+    <iconUrl>http://www.episerver.com/Framework/Styles/Images/Products/Content.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>EPiServer CMS Core Assemblies</description>
+    <tags>EPiServer CMS</tags>
+    <references>
+      <reference file="EPiServer.BaseLibrary.dll" />
+      <reference file="EPiServer.Blog.dll" />
+      <reference file="EPiServer.Configuration.dll" />
+      <reference file="EPiServer.dll" />
+      <reference file="EPiServer.Enterprise.dll" />
+      <reference file="EPiServer.ImageLibrary.dll" />
+      <reference file="EPiServer.Implementation.dll" />
+      <reference file="EPiServer.Legacy4.dll" />
+      <reference file="EPiServer.LinkAnalyzer.dll" />
+      <reference file="EPiServer.Log.Analyzers.dll" />
+      <reference file="EPiServer.Log.Core.dll" />
+      <reference file="EPiServer.Lucene.dll" />
+      <reference file="EPiServer.Scheduler.dll" />
+      <reference file="EPiServer.Scheduler.WKTL.dll" />
+      <reference file="EPiServer.Web.WebControls.dll" />
+      <reference file="EPiServer.WebDav.dll" />
+      <reference file="EPiServer.WebParts.dll" />
+      <reference file="EPiServer.WorkflowFoundation.dll" />
+      <reference file="EPiServer.XForms.dll" />
+      <reference file="EPiServer.XmlRpc.dll" />
+    </references>
+  </metadata>
+</package>

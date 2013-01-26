@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>EPiServer.Framework</id>
+    <version>6.2.267.1</version>
+    <authors>EPiServer AB</authors>
+    <owners>EPiServer AB</owners>
+    <licenseUrl>http://world.episerver.com/PageFiles/99654/EPiServer EULA.txt</licenseUrl>
+    <projectUrl>http://www.episerver.com/en/Products/Content/</projectUrl>
+    <iconUrl>http://www.episerver.com/Framework/Styles/Images/Products/Integration.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>EPiServer Framework Assemblies</description>
+    <tags>EPiServer Framework</tags>
+    <references>
+      <reference file="EPiServer.ApplicationModules.dll" />
+      <reference file="EPiServer.Data.dll" />
+      <reference file="EPiServer.Events.dll" />
+      <reference file="EPiServer.Framework.dll" />
+      <reference file="EPiServer.Shell.dll" />
+      <reference file="System.ComponentModel.Composition.dll" />
+    </references>
+  </metadata>
+</package>

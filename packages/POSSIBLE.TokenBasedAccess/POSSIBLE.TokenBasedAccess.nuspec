@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>POSSIBLE.TokenBasedAccess</id>
+    <version>1.0.0.0</version>
+    <authors>Mark Everard</authors>
+    <licenseUrl>http://personalization.codeplex.com/license</licenseUrl>
+    <projectUrl>http://personalization.codeplex.com</projectUrl>
+    <iconUrl>http://www.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=personalization&amp;DownloadId=237158</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The POSSIBLE TokenBasedAccess library provides an API to allow a developers to set up limited access to an unpublished or otherwise restricted EPiServer content page.</description>
+    <summary>The POSSIBLE TokenBasedAccess library provides an API to allow a developers to set up limited access to an unpublished or otherwise restricted EPiServer content page.</summary>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="EPiServer.CMS.Core" version="6.1.379.0" />
+      <dependency id="EPiServer.Framework" version="6.2.267.1" />
+    </dependencies>
+  </metadata>
+</package>
