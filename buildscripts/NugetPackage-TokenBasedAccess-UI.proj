@@ -15,15 +15,15 @@
  
 	<Target Name="NugetPrepareContent">
 		<ItemGroup>
-			<ContentFiles Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\Views\**" />
+			<ContentFiles Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\modules\POSSIBLE.TokenBasedAccess.UI\*.ascx" />
 		</ItemGroup>
 		<!-- Copy the source files to the package dir -->
-		<Copy SourceFiles="@(ContentFiles)" DestinationFolder="$(PackageDir)\content\modules\POSSIBLE.TokenBasedAccess.UI\Views\%(RecursiveDir)" />
+		<Copy SourceFiles="@(ContentFiles)" DestinationFolder="$(PackageDir)\content\modules\POSSIBLE.TokenBasedAccess.UI\RecursiveDir)" />
 	</Target>
  
 	<Target Name="NugetPrepareLibraries">
 		<ItemGroup>
-			<MainBinaries Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\bin\$(Configuration)\POSSIBLE.TokenBasedAccess.UI.dll" />
+			<MainBinaries Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\bin\POSSIBLE.TokenBasedAccess.UI.dll" />
 		</ItemGroup>
 		<!-- Copy the source files to the package dir -->
 		<Copy SourceFiles="@(MainBinaries)" DestinationFolder="$(PackageDir)\lib\$(TargetFramework)\%(RecursiveDir)" />
@@ -31,13 +31,13 @@
  
 	<Target Name="NugetPackage">
 		<!-- Get the version number of the main assembly to insert into the nuspec files -->
-		<GetAssemblyIdentity AssemblyFiles="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\bin\$(Configuration)\POSSIBLE.TokenBasedAccess.UI.dll">
+		<GetAssemblyIdentity AssemblyFiles="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\bin\POSSIBLE.TokenBasedAccess.UI.dll">
 			<Output TaskParameter="Assemblies" ItemName="AsmInfo" />
 		</GetAssemblyIdentity>
 		<!-- insert the version number into the nuspec files -->
 		<XmlUpdate
 			Namespace="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd"
-			XmlFileName="$(PackageDir)\POSSIBLE.TokenBasedAccess.UI\POSSIBLE.TokenBasedAccess.UI.nuspec"
+			XmlFileName="$(PackageDir)\POSSIBLE.TokenBasedAccess.UI.nuspec"
 			XPath="/package/metadata/version"
 			Value="%(AsmInfo.Version)" /> 
 		<Exec WorkingDirectory="$(PackageDir)" Command="$(BaseDir)\lib\nuget\nuget.exe pack $(PackageDir)\POSSIBLE.TokenBasedAccess.UI.nuspec" />

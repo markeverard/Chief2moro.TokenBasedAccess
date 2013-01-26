@@ -5,8 +5,8 @@
     <version>1.0.0.0</version>
     <authors>Mark Everard</authors>
     <licenseUrl>http://personalization.codeplex.com/license</licenseUrl>
-    <projectUrl>http://personalization.codeplex.com</projectUrl>
-    <iconUrl>http://www.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=personalization&amp;DownloadId=237158</iconUrl>
+    <projectUrl>https://github.com/markeverard/POSSIBLE.TokenBasedAccess</projectUrl>
+    <iconUrl>http://download-codeplex.sec.s-msft.com/Download?ProjectName=personalization&amp;DownloadId=611006&amp;Build=20006</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The POSSIBLE TokenBasedAccess library provides an API to allow a developers to set up limited access to an unpublished or otherwise restricted EPiServer content page.</description>
     <summary>The POSSIBLE TokenBasedAccess library provides an API to allow a developers to set up limited access to an unpublished or otherwise restricted EPiServer content page.</summary>

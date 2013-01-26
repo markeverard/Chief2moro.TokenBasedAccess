@@ -5,6 +5,7 @@ using EPiServer;
 using EPiServer.Configuration;
 using EPiServer.Core;
 using EPiServer.PlugIn;
+using EPiServer.UI.WebControls;
 
 namespace POSSIBLE.TokenBasedAccess.UI
 {

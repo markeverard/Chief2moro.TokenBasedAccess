@@ -5,14 +5,14 @@
     <version>1.0.0.0</version>
     <authors>Mark Everard</authors>
     <licenseUrl>http://personalization.codeplex.com/license</licenseUrl>
-    <projectUrl>http://personalization.codeplex.com</projectUrl>
-    <iconUrl>http://www.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=personalization&amp;DownloadId=237158</iconUrl>
+    <projectUrl>https://github.com/markeverard/POSSIBLE.TokenBasedAccess</projectUrl>
+    <iconUrl>http://download-codeplex.sec.s-msft.com/Download?ProjectName=personalization&amp;DownloadId=611006&amp;Build=20006</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The POSSIBLE TokenBasedAccess UI library provides an EPiServer plugin allowing management of access tokens on a page by page basis.</description>
-    <summary>The POSSIBLE TokenBasedAccess UI library provides an EPiServer plugin allowing management of access tokens on a page by page basis.</summary>
+    <description>The POSSIBLE TokenBasedAccess UI library provides an EPiServer CMS6 R2 plugin allowing management of access tokens on a page by page basis.</description>
+    <summary>The POSSIBLE TokenBasedAccess UI library provides an EPiServer CMS6 R2 plugin allowing management of access tokens on a page by page basis.</summary>
     <language>en-US</language>
-	<dependencies>
-		<dependency id="POSSIBLE.TokenBasedAcess" version="1.0.0.0" />
-	</dependencies>
+    <dependencies>
+      <dependency id="POSSIBLE.TokenBasedAccess" version="1.0.0.0" />
+    </dependencies>
   </metadata>
 </package>
