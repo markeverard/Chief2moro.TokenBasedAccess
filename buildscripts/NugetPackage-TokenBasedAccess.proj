@@ -11,8 +11,16 @@
  
 	<UsingTask AssemblyFile="$(MSBuildExtensions)" TaskName="MSBuild.Community.Tasks.XmlUpdate" />
  
-	<Target Name="default" DependsOnTargets="NugetPrepareLibraries;NugetPackage" />
+	<Target Name="default" DependsOnTargets="NugetPrepareContent;NugetPrepareLibraries;NugetPackage" />
  
+	<Target Name="NugetPrepareContent">
+		<ItemGroup>
+			<ContentFiles Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess\web.*" />
+		</ItemGroup>
+		<!-- Copy the source files to the package dir -->
+		<Copy SourceFiles="@(ContentFiles)" DestinationFolder="$(PackageDir)\content\%(RecursiveDir)" />
+	</Target>
+	
 	<Target Name="NugetPrepareLibraries">
 		<ItemGroup>
 			<MainBinaries Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess\bin\$(Configuration)\POSSIBLE.TokenBasedAccess.dll" />

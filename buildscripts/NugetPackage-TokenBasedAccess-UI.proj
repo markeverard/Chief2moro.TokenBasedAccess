@@ -18,7 +18,7 @@
 			<ContentFiles Include="$(BaseDir)\src\POSSIBLE.TokenBasedAccess.UI\modules\POSSIBLE.TokenBasedAccess.UI\*.ascx" />
 		</ItemGroup>
 		<!-- Copy the source files to the package dir -->
-		<Copy SourceFiles="@(ContentFiles)" DestinationFolder="$(PackageDir)\content\modules\POSSIBLE.TokenBasedAccess.UI\RecursiveDir)" />
+		<Copy SourceFiles="@(ContentFiles)" DestinationFolder="$(PackageDir)\content\modules\POSSIBLE.TokenBasedAccess.UI\%(RecursiveDir)" />
 	</Target>
  
 	<Target Name="NugetPrepareLibraries">

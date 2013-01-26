@@ -1,0 +1,9 @@
+<configuration>
+	<episerver.framework>
+		<virtualRoles replacePrincipal="true">
+			<providers>
+				<add name="AccessToken" type="POSSIBLE.TokenBasedAccess.AccessTokenRole, POSSIBLE.TokenBasedAccess" />
+    </providers>
+  </virtualRoles>
+</episerver.framework>
+</configuration>
