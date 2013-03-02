@@ -3,11 +3,14 @@ using System.Security.Principal;
 using System.Web;
 using EPiServer.Core;
 using EPiServer.Security;
+using log4net;
 
 namespace POSSIBLE.TokenBasedAccess
 {
     public class AccessTokenRole : VirtualRoleProviderBase
     {
+        private static readonly ILog Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public const string RoleName = "AccessToken";
 
         public override bool IsInVirtualRole(IPrincipal principal, object context)
@@ -23,7 +26,6 @@ namespace POSSIBLE.TokenBasedAccess
             if (!ParseGuid(queryStringToken))
                 return false;
 
-            var tokenStore = new AccessTokenDataStore();
             var pageRef = new PageReference(httpContext.Request.QueryString["id"]);
             var pageLanguage = httpContext.Request.QueryString["epslanguage"];
             
@@ -31,6 +33,9 @@ namespace POSSIBLE.TokenBasedAccess
             if (tokenGuid == Guid.Empty)
                 return false;
 
+            Logger.InfoFormat("Token present and has the correct format {0}", tokenGuid);
+
+            var tokenStore = new AccessTokenDataStore();
             return tokenStore.PresentToken(tokenGuid, pageRef.ID, pageRef.WorkID, pageLanguage);
         }
 

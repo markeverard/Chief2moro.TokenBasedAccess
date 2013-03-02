@@ -5,11 +5,14 @@ using EPiServer.Core;
 using EPiServer.Data;
 using EPiServer.Data.Dynamic;
 using EPiServer.Security;
+using log4net;
 
 namespace POSSIBLE.TokenBasedAccess
 {
     public class AccessTokenDataStore : IAccessTokenDataStore
     {
+        private static readonly ILog Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private DynamicDataStore Store { get { return typeof(PageAccessToken).GetStore(); } }
 
         /// <summary>
@@ -74,7 +77,10 @@ namespace POSSIBLE.TokenBasedAccess
         {
             var tokenInStore = Get(token);
             if (tokenInStore == null)
+            {
+                Logger.InfoFormat("Token not present in data store");
                 return false;
+            }
 
             bool tokenIsAccepted =  tokenInStore.LanguageBranch == pageLanguageBranch
                                     && tokenInStore.PageId == pageId
@@ -82,8 +88,12 @@ namespace POSSIBLE.TokenBasedAccess
                                     && !tokenInStore.HasExpired;
 
             if (!tokenIsAccepted)
+            {
+                Logger.InfoFormat("Token not accepted {0}", token);
                 return false;
+            }
 
+            Logger.InfoFormat("Token accepted {0} for page {1} - updating token", token, pageId);
             UpdateTokenUsageCount(tokenInStore);
             return true;
         }
