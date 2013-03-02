@@ -15,6 +15,7 @@ namespace POSSIBLE.TokenBasedAccess
 
         public override bool IsInVirtualRole(IPrincipal principal, object context)
         {
+            return false;
             var httpContext = HttpContext.Current;
             if (httpContext == null)
                 return false;

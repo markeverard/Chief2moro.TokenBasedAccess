@@ -154,6 +154,7 @@
     <Compile Include="PageAccessTokenFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SmtpNotificationService.cs" />
+    <Compile Include="TokenBasedAccessModule.cs" />
     <Compile Include="TokenExpirationType.cs" />
   </ItemGroup>
   <ItemGroup>

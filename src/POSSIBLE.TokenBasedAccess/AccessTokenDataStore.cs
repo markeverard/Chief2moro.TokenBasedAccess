@@ -101,6 +101,9 @@ namespace POSSIBLE.TokenBasedAccess
 
         private void UpdateTokenUsageCount(PageAccessToken pageAccessToken)
         {
+            if (pageAccessToken.ExpirationType == TokenExpirationType.AbsoluteExpiry)
+                return;
+
             pageAccessToken.UsageCount++;
             Store.Save(pageAccessToken);
         }
