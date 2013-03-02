@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using EPiServer.Configuration;
 using EPiServer.Core;
 using EPiServer.Data;
 using EPiServer.Data.Dynamic;
@@ -89,7 +90,7 @@ namespace POSSIBLE.TokenBasedAccess
 
             if (!tokenIsAccepted)
             {
-                Logger.InfoFormat("Token not accepted {0}", token);
+                Logger.InfoFormat("Token not accepted {0} {1} {2}_{3} {4}", token, tokenInStore.LanguageBranch, tokenInStore.PageId, tokenInStore.WorkId, tokenInStore.HasExpired);
                 return false;
             }
 

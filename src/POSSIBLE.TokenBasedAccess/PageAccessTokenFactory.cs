@@ -34,6 +34,9 @@ namespace POSSIBLE.TokenBasedAccess
             string currentUrl = UriSupport.AddQueryString(currentPage.LinkURL, "id",
                                                           string.Format("{0}_{1}", currentPage.PageLink.ID,
                                                                         currentPage.PageLink.WorkID));
+            if (!currentUrl.Contains("epslanguage"))
+                currentUrl = UriSupport.AddQueryString(currentUrl, "epslanguage", currentPage.LanguageBranch);
+
             currentUrl = UriSupport.AbsoluteUrlBySettings(currentUrl);
             return currentUrl;
         }
