@@ -38,7 +38,7 @@ namespace POSSIBLE.TokenBasedAccess
             if (accessClone.Exists(AccessTokenRole.RoleName))
                 accessClone.Remove(AccessTokenRole.RoleName);
 
-            accessClone.Add(new AccessControlEntry(AccessTokenRole.RoleName, AccessLevel.Edit));
+            accessClone.Add(new AccessControlEntry(AccessTokenRole.RoleName, AccessLevel.Edit | AccessLevel.Read));
             
             accessClone.Save();
         }

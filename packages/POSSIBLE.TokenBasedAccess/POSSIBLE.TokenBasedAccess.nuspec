@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>POSSIBLE.TokenBasedAccess</id>
-    <version>1.0.0.0</version>
+    <version>1.0.0.1</version>
     <authors>Mark Everard</authors>
     <licenseUrl>http://personalization.codeplex.com/license</licenseUrl>
     <projectUrl>https://github.com/markeverard/POSSIBLE.TokenBasedAccess</projectUrl>
